@@ -1,12 +1,29 @@
 import Image from "next/image";
 import { Box, Button, Grid, Typography } from "@mui/material";
-import { Hero, Intro } from "@/features/home";
+import {
+  Hero,
+  Intro,
+  Benefits,
+  Technology,
+  Workout,
+  Involved,
+  Community,
+} from "@/features/home";
 export default function Home() {
   return (
     <main>
       <Hero />
       <Box sx={{ width: "1124px", margin: "auto" }}>
         <Intro />
+        <Benefits />
+      </Box>
+      <Box sx={{ width: "1124px", margin: "auto" }}>
+        <Box mt={"150px"}>
+          <Involved />
+        </Box>
+        <Technology />
+        <Workout />
+        <Community />
       </Box>
     </main>
   );

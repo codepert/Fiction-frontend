@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { Box, List, ListItem, Link } from "@mui/material";
 import { COLORS } from "@/utils/colors";
+import { menudata } from "@/utils/contents";
 export type NavProps = {};
 
 export const Nav: React.FC<NavProps> = ({}) => {
@@ -24,30 +25,13 @@ export const Nav: React.FC<NavProps> = ({}) => {
         },
       }}
     >
-      <ListItem>
-        <Link>Home</Link>
-      </ListItem>
-      <ListItem>
-        <Link>About</Link>
-      </ListItem>
-      <ListItem>
-        <Link>Benefits</Link>
-      </ListItem>
-      <ListItem>
-        <Link>Tokenomics</Link>
-      </ListItem>
-      <ListItem>
-        <Link>Technology</Link>
-      </ListItem>
-      <ListItem>
-        <Link>Team</Link>
-      </ListItem>
-      <ListItem>
-        <Link>Community</Link>
-      </ListItem>
-      <ListItem>
-        <Link>Partners</Link>
-      </ListItem>
+      {menudata.map((item, i) => {
+        return (
+          <ListItem key={i}>
+            <Link href={item.url}>{item.title}</Link>
+          </ListItem>
+        );
+      })}
     </List>
   );
 };

@@ -1,21 +1,21 @@
 import React, { FC } from "react";
-import { Box, Grid, IconButton } from "@mui/material";
-import Facebook from "@mui/icons-material/Facebook";
-import Twitter from "@mui/icons-material/Twitter";
-import Instagram from "@mui/icons-material/Instagram";
+import { Box, IconButton } from "@mui/material";
+import Image from "next/image";
 export type SocialProps = {};
 
 export const Social: React.FC<SocialProps> = ({}) => {
   return (
     <Box sx={{ display: "flex", columnGap: "24px" }} pt={"8px"}>
       <IconButton aria-label="facebook">
-        <Facebook />
+        <Image src="/facebook.svg" width={20} height={20} alt="facebook" />
       </IconButton>
       <IconButton aria-label="twitter">
-        <Twitter />
+        {/* <Twitter /> */}
+        <Image src="/twitter.svg" width={20} height={20} alt="twitter" />
       </IconButton>
       <IconButton aria-label="instragram">
-        <Instagram />
+        {/* <Instagram /> */}
+        <Image src="/instagram.svg" width={20} height={20} alt="instagram" />
       </IconButton>
     </Box>
   );

@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import Image from "next/image";
-import { Typography, Box } from "@mui/material";
+import { Box } from "@mui/material";
 export type LogoProps = {};
 import { COLORS } from "@/utils/colors";
 export const Logo: React.FC<LogoProps> = ({}) => {
   return (
-    <Typography
+    <Box
       sx={{
         display: "inline",
         fontSize: "42px",
@@ -19,6 +19,6 @@ export const Logo: React.FC<LogoProps> = ({}) => {
       <Box sx={{ mt: "10px" }}>
         <Image src="/logo.svg" width={54} height={44} alt="logo" />
       </Box>
-    </Typography>
+    </Box>
   );
 };
