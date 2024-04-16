@@ -8,6 +8,7 @@ import { Nav } from "@/components/header/Nav";
 import { Social } from "@/components/header/Social";
 import { ToggleNav } from "./Nav/toggleNav";
 import { COLORS } from "@/utils/colors";
+
 export const Header = () => {
   const [isOpenToggleMenu, setIsOpenToggleMenu] = useState(false);
   const toggleMenu = () => {
@@ -17,14 +18,14 @@ export const Header = () => {
     <Box
       sx={{
         height: 94,
-        position: "sticky",
+        position: "fixed",
+        width: "100%",
         top: 0,
         backgroundColor: "#fff",
       }}
-      pt={"23px"}
-      pb={"23px"}
+      p={"23px 0px"}
     >
-      <Box sx={{ width: { lg: 1124, sm: 600 } }} m={{ lg: "auto" }}>
+      <Box sx={{ width: { lg: 1124 } }} m={{ lg: "auto" }}>
         <Grid container direction="row" justifyContent="space-between">
           <Grid item>
             <Box sx={{ display: "flex" }}>
@@ -40,6 +41,12 @@ export const Header = () => {
                 disableElevation
                 href=""
                 sx={{
+                  display: {
+                    xs: "none",
+                    sm: "none",
+                    md: "none",
+                    lg: "block",
+                  },
                   backgroundColor: COLORS.green,
                   "&:hover": {
                     opacity: 0.8,
@@ -74,7 +81,6 @@ export const Header = () => {
                     color: COLORS.grey,
                     display: {
                       lg: "none",
-                      md: "none",
                       xs: !isOpenToggleMenu ? "block" : "none",
                       sm: !isOpenToggleMenu ? "block" : "none",
                     },
@@ -85,7 +91,6 @@ export const Header = () => {
                     color: COLORS.grey,
                     display: {
                       lg: "none",
-                      md: "none",
                       xs: isOpenToggleMenu ? "block" : "none",
                       sm: isOpenToggleMenu ? "block" : "none",
                     },
