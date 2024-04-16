@@ -2,8 +2,10 @@ import {
   benefitsType,
   technologyType,
   involvedType,
-  CommunityType,
+  communityType,
   menuType,
+  sectionType,
+  teamType,
 } from "@/types";
 export const benefits: benefitsType[] = [
   {
@@ -130,9 +132,9 @@ export const involvedData: involvedType[] = [
   },
 ];
 
-export const communityData: CommunityType[] = [
+export const communityData: communityType[] = [
   {
-    title: "Join the Movemen",
+    title: "Join the Movement",
     desc: "Wyler Chain is more than just technology; it's a community. Join\nour forums, discussions, and events to connect with like-minded\nindividuals, share ideas, and actively contribute to the project's\ngrowth.",
     img: "/community1.svg",
   },
@@ -176,4 +178,46 @@ export const menudata: menuType[] = [
     title: "Partners",
     url: "/partners",
   },
+];
+
+export const teamData: teamType[] = [
+  {
+    title: "Lexie",
+    desc: "Communications Strategist",
+    img: "/team_mem1.svg",
+  },
+  {
+    title: "Ida",
+    desc: "Lead Research Producer",
+    img: "/team_mem2.svg",
+  },
+  {
+    title: "Britney",
+    desc: "Implementation Specialist",
+    img: "/team_mem3.svg",
+  },
+  {
+    title: "Chelsey",
+    desc: "Forward Interactions Develope",
+    img: "/team_mem4.svg",
+  },
+  {
+    title: "Lexie",
+    desc: "Implementation Specialist",
+    img: "/team_mem5.svg",
+  },
+  {
+    title: "Lexie",
+    desc: "Communications Strategist",
+    img: "/team_mem6.svg",
+  },
+];
+
+export const partnerData: string[] = [
+  "/partner1.svg",
+  "/partner2.svg",
+  "/partner3.svg",
+  "/partner4.svg",
+  "/partner5.svg",
+  "/partner6.svg",
 ];

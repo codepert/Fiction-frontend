@@ -8,6 +8,9 @@ import {
   Workout,
   Involved,
   Community,
+  Team,
+  Partner,
+  Tokenomics,
 } from "@/features/home";
 export default function Home() {
   return (
@@ -29,6 +32,9 @@ export default function Home() {
         <Technology />
         <Workout />
         <Community />
+        <Team />
+        <Partner />
+        <Tokenomics />
       </Box>
     </Box>
   );

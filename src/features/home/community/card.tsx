@@ -5,9 +5,9 @@ import { Grid, Box, Typography } from "@mui/material";
 import { responsiveParagraph } from "./style.css";
 
 import { COLORS } from "@/utils/colors";
-import { CommunityType } from "@/types";
+import { communityType } from "@/types";
 
-export type CommunityCardProps = CommunityType;
+export type CommunityCardProps = communityType;
 
 export const CommunityCard: React.FC<CommunityCardProps> = ({
   title,
@@ -22,6 +22,7 @@ export const CommunityCard: React.FC<CommunityCardProps> = ({
           width={544}
           height={402}
           alt="be"
+          layout="responsive"
           sizes="(max-width: 768px) 100% 100%"
         />
       </Box>
