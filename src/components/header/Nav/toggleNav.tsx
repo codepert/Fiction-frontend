@@ -5,9 +5,13 @@ import { COLORS } from "@/utils/colors";
 import { menudata } from "@/utils/contents";
 export type NavProps = {
   show: boolean;
+  toggle: () => void;
 };
 
-export const ToggleNav: React.FC<NavProps> = ({ show }) => {
+export const ToggleNav: React.FC<NavProps> = ({ show, toggle }) => {
+  const toggleOpen = () => {
+    toggle();
+  };
   return (
     <Box
       className="test-box"
@@ -50,7 +54,13 @@ export const ToggleNav: React.FC<NavProps> = ({ show }) => {
         {menudata.map((item, i) => {
           return (
             <ListItem key={i} sx={{ textAlign: "center", display: "block" }}>
-              <Link href={item.url} sx={{ textAlign: "center" }}>
+              <Link
+                href={item.url}
+                sx={{ textAlign: "center" }}
+                onClick={() => {
+                  toggleOpen();
+                }}
+              >
                 {item.title}
               </Link>
             </ListItem>

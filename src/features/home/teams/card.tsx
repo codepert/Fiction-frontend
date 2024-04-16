@@ -9,7 +9,7 @@ export type MemberCardProps = teamType;
 
 export const MemberCard: React.FC<MemberCardProps> = ({ title, desc, img }) => {
   return (
-    <Box>
+    <Box sx={{ marginBottom: "60px" }}>
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Image src={img} width={128} height={128} alt="member" priority />
       </Box>

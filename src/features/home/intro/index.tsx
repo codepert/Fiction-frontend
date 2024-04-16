@@ -12,6 +12,7 @@ export type IntroProps = {};
 export const Intro: React.FC<IntroProps> = ({}) => {
   return (
     <Box
+      id="about"
       sx={{
         padding: {
           xs: "50px 10px",

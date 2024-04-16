@@ -8,6 +8,7 @@ export type TechnologyProps = {};
 export const Technology: React.FC<TechnologyProps> = ({}) => {
   return (
     <Box
+      id="technology"
       my={"180px"}
       sx={{
         padding: {

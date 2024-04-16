@@ -26,3 +26,4 @@ export type menuType = {
   title: string;
   url: string;
 };
+export type Direction = "up" | "right" | "down" | "left";

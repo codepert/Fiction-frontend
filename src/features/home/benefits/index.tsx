@@ -11,6 +11,7 @@ export type BenefitProps = {};
 export const Benefits: React.FC<BenefitProps> = ({}) => {
   return (
     <Box
+      id="benefits"
       sx={{
         backgroundColor: "#FCFCFD",
         padding: {

@@ -14,28 +14,30 @@ import {
 } from "@/features/home";
 export default function Home() {
   return (
-    <Box sx={{ marginTop: "94px" }}>
-      <Hero />
-      <Box
-        sx={{
-          maxWidth: "1124px",
-          margin: "auto",
-        }}
-      >
-        <Intro />
-        <Benefits />
-      </Box>
-      <Box sx={{ maxWidth: "1124px", margin: "auto" }}>
-        <Box mt={"150px"}>
-          <Involved />
+    <>
+      <Box sx={{ marginTop: "94px" }}>
+        <Hero />
+        <Box
+          sx={{
+            maxWidth: "1124px",
+            margin: "auto",
+          }}
+        >
+          <Intro />
+          <Benefits />
         </Box>
-        <Technology />
-        <Workout />
-        <Community />
-        <Team />
-        <Partner />
-        <Tokenomics />
+        <Box sx={{ maxWidth: "1124px", margin: "auto" }}>
+          <Box mt={"150px"}>
+            <Involved />
+          </Box>
+          <Technology />
+          <Workout />
+          <Community />
+          <Team />
+          <Partner />
+          <Tokenomics />
+        </Box>
       </Box>
-    </Box>
+    </>
   );
 }

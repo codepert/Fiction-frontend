@@ -7,13 +7,16 @@ import { Logo } from "@/components/header/Logo";
 import { Nav } from "@/components/header/Nav";
 import { Social } from "@/components/header/Social";
 import { ToggleNav } from "./Nav/toggleNav";
+import { MenuToggle } from "./Nav/menuToggle";
 import { COLORS } from "@/utils/colors";
+import { motion, sync, useCycle } from "framer-motion";
 
 export const Header = () => {
-  const [isOpenToggleMenu, setIsOpenToggleMenu] = useState(false);
-  const toggleMenu = () => {
-    setIsOpenToggleMenu(!isOpenToggleMenu);
-  };
+  // const toggleMenu = () => {
+  //   setIsOpenToggleMenu(!isOpenToggleMenu);
+  // };
+
+  const [isOpenToggleMenu, toggleOpen] = useCycle(false, true);
   return (
     <Box
       sx={{
@@ -22,8 +25,9 @@ export const Header = () => {
         width: "100%",
         top: 0,
         backgroundColor: "#fff",
+        zIndex: 10,
       }}
-      p={"23px 0px"}
+      p={"23px 10px"}
     >
       <Box sx={{ width: { lg: 1124 } }} m={{ lg: "auto" }}>
         <Grid container direction="row" justifyContent="space-between">
@@ -62,7 +66,15 @@ export const Header = () => {
               >
                 Learn more
               </Button>
-
+              <motion.nav
+                initial={false}
+                animate={isOpenToggleMenu ? "open" : "closed"}
+                // custom={height}
+                // ref={containerRef}
+              >
+                <MenuToggle toggle={() => toggleOpen()} />
+              </motion.nav>
+              {/* 
               <Button
                 sx={{
                   borderRadius: 0,
@@ -96,12 +108,12 @@ export const Header = () => {
                     },
                   }}
                 />
-              </Button>
+              </Button> */}
             </Box>
           </Grid>
         </Grid>
       </Box>
-      <ToggleNav show={isOpenToggleMenu} />
+      <ToggleNav show={isOpenToggleMenu} toggle={toggleOpen} />
     </Box>
   );
 };

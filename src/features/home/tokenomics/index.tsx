@@ -7,7 +7,7 @@ import { COLORS } from "@/utils/colors";
 // import { MemberCard } from "./card";
 
 export type TokenomicsProps = {};
-const pieParams = { height: 300, margin: { right: 5 } };
+const pieParams = { height: 300 };
 export const Tokenomics: React.FC<TokenomicsProps> = ({}) => {
   const TokenomicsData: { title: string; value: string; color: string }[] = [
     {
@@ -43,6 +43,7 @@ export const Tokenomics: React.FC<TokenomicsProps> = ({}) => {
   ];
   return (
     <Grid
+      id="tokenomics"
       container
       columns={{ xs: 1, sm: 1, md: 2, lg: 2 }}
       columnSpacing={3}
@@ -62,7 +63,7 @@ export const Tokenomics: React.FC<TokenomicsProps> = ({}) => {
         >
           Tokenomics
         </Typography>
-        <Box mt={4} sx={{ width: "100%", height: 500 }}>
+        <Box mt={4}>
           <PieChart
             {...pieParams}
             series={[
@@ -97,8 +98,8 @@ export const Tokenomics: React.FC<TokenomicsProps> = ({}) => {
                 ],
               },
             ]}
-            width={400}
-            height={400}
+            width={500}
+            height={500}
           />
         </Box>
       </Grid>
@@ -106,13 +107,14 @@ export const Tokenomics: React.FC<TokenomicsProps> = ({}) => {
         <Grid container columns={2} spacing={4}>
           {TokenomicsData.map((item, i) => {
             return (
-              <Grid item key={i} xs={1} sm={1} md={1} lg={1} mb={4}>
+              <Grid item key={i} xs={1} sm={1} md={1} lg={1} mb={2}>
                 <Typography
                   variant="h2"
                   sx={{
                     color: COLORS.black,
                     pb: 3,
                     borderBottom: `1px solid ${COLORS.grey80}`,
+                    fontWeight: 100,
                   }}
                 >
                   {item.title}

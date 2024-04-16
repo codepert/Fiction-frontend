@@ -10,6 +10,7 @@ export type CommunityProps = {};
 export const Community: React.FC<CommunityProps> = ({}) => {
   return (
     <Box
+      id="community"
       sx={{
         padding: {
           xs: "50px 10px 0 10px",

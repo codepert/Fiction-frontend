@@ -21,7 +21,7 @@ export default function RootLayout({
 
   // if (!loading) return <Loader />;
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body>
         <ThemeProvider>
           <Header />

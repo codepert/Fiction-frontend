@@ -12,6 +12,7 @@ export type InvolvedProps = {};
 export const Involved: React.FC<InvolvedProps> = ({}) => {
   return (
     <Box
+      id="involved"
       sx={{
         padding: {
           xs: "0px 10px",

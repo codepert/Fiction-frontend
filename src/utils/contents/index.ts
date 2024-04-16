@@ -152,31 +152,31 @@ export const menudata: menuType[] = [
   },
   {
     title: "About",
-    url: "/about",
+    url: "#about",
   },
   {
     title: "Benefits",
-    url: "/benefits",
+    url: "#benefits",
   },
   {
     title: "Tokenomics",
-    url: "/tokenomics",
+    url: "#tokenomics",
   },
   {
     title: "Technology",
-    url: "/technology",
+    url: "#technology",
   },
   {
     title: "Team",
-    url: "/team",
+    url: "#team",
   },
   {
     title: "Community",
-    url: "/community",
+    url: "#community",
   },
   {
     title: "Partners",
-    url: "/partners",
+    url: "#partners",
   },
 ];
 
