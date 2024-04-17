@@ -10,7 +10,7 @@ export const Social: React.FC<SocialProps> = ({}) => {
   return (
     <Box
       sx={{ display: "flex", columnGap: { lg: "24px", md: "5px" } }}
-      pt={"8px"}
+      pt={"5px"}
     >
       {/* <IconButton aria-label="facebook">
         <Link href="">

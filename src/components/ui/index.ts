@@ -1,2 +1,3 @@
 import Wrapper from "./Wrapper";
-export { Wrapper };
+import SmoothScrolling from "./SmoothScrolling";
+export { Wrapper, SmoothScrolling };

@@ -2,6 +2,8 @@
 import React, { FC } from "react";
 import { Box, Typography, Grid } from "@mui/material";
 
+import { motion } from "framer-motion";
+import { getSectionAnimation } from "@/styles/animations";
 import { COLORS } from "@/utils/colors";
 import { partnerData } from "@/utils/contents";
 
@@ -23,27 +25,29 @@ export const Partner: React.FC<BenefitProps> = ({}) => {
       }}
       mt={"134px"}
     >
-      <Typography
-        variant="subtitle1"
-        sx={{ textAlign: { md: "center", xs: "left" }, color: COLORS.black }}
-        my={5}
-      >
-        Partners
-      </Typography>
-      <Grid
-        container
-        columns={{ xs: 2, sm: 6, md: 12, lg: 12 }}
-        spacing={3}
-        sx={{ marginTop: "32px" }}
-      >
-        {partnerData.map((item, i) => {
-          return (
-            <Grid item key={i} lg={2} md={2} sm={2} xs={1}>
-              <PartnerImg src={item} />
-            </Grid>
-          );
-        })}
-      </Grid>
+      <motion.div {...getSectionAnimation}>
+        <Typography
+          variant="subtitle1"
+          sx={{ textAlign: { md: "center", xs: "left" }, color: COLORS.black }}
+          my={5}
+        >
+          Partners
+        </Typography>
+        <Grid
+          container
+          columns={{ xs: 2, sm: 6, md: 12, lg: 12 }}
+          spacing={3}
+          sx={{ marginTop: "32px" }}
+        >
+          {partnerData.map((item, i) => {
+            return (
+              <Grid item key={i} lg={2} md={2} sm={2} xs={1}>
+                <PartnerImg src={item} />
+              </Grid>
+            );
+          })}
+        </Grid>
+      </motion.div>
     </Box>
   );
 };

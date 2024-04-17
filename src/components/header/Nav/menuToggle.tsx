@@ -5,7 +5,7 @@ import { COLORS } from "@/utils/colors";
 const Path = (props: any) => (
   <motion.path
     fill="transparent"
-    strokeWidth="3"
+    strokeWidth="2"
     stroke={COLORS.grey}
     strokeLinecap="round"
     {...props}
@@ -27,7 +27,7 @@ export const MenuToggle = ({ toggle }: { toggle: () => void }) => {
       }}
       onClick={toggle}
     >
-      <svg width="23" height="23" viewBox="0 0 23 23">
+      <svg width="15" height="23" viewBox="0 0 23 23">
         <Path
           variants={{
             closed: { d: "M 2 2.5 L 20 2.5" },

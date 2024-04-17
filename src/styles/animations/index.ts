@@ -102,7 +102,7 @@ export const slideUp = ({
 
 export const sectionVariants = slideUp({
   delay: 0.5,
-  duration: 1.75,
+  // duration: 1.75,
   offset: 50,
 });
 
@@ -110,7 +110,7 @@ export const getSectionAnimation = {
   variants: sectionVariants,
   initial: "hidden",
   whileInView: "show",
-  viewport: { once: true },
+  // viewport: { once: true },
 };
 
 // * For projects
@@ -127,7 +127,7 @@ export const projectVariants: Variants = {
       type: "spring",
       stiffness: 150,
       damping: 20,
-      delay: 0.2 * i,
+      delay: 0.1 * i,
       // duration: 0.5,
     },
   }),
